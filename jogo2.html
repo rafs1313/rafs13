@@ -1,132 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Rafacles - Jogo 2</title>
+  <title>parkour v7</title>
+
   <style>
-    /* Reset básico */
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #000;
+      background: #111;
+      color: white;
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      color: white;
+      height: 100vh;
       text-align: center;
     }
 
-    /* Overlay da mensagem inicial */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.9);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-      padding: 20px;
+    .container {
+      max-width: 500px;
     }
 
-    .overlay a {
-      color: #4CAF50;
-      text-decoration: none;
+    h1 {
+      margin-bottom: 10px;
     }
 
-    .overlay a:hover {
-      text-decoration: underline;
+    p {
+      color: #ccc;
     }
 
-    .overlay button {
+    .botao {
+      display: inline-block;
       margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      background-color: #4CAF50;
+      padding: 15px 30px;
+      background: #ff4747;
       color: white;
-      cursor: pointer;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      transition: 0.2s;
     }
 
-    .overlay button:hover {
-      background-color: #45a049;
+    .botao:hover {
+      background: #ff2222;
+      transform: scale(1.05);
     }
-
-    /* Container do iframe do jogo */
-    .game-container {
-      width: 100%;
-      height: 100%;
-      display: none; /* começa escondido */
-      justify-content: center;
-      align-items: center;
-    }
-
-    .game-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Mensagem para virar o celular (vertical) */
-    .rotate-message {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #000;
-      z-index: 20;
-      font-size: 1.5rem;
-    }
-
-    @media (orientation: portrait) {
-      .rotate-message {
-        display: flex;
-      }
-    }
-
   </style>
 </head>
+
 <body>
 
-  <!-- Overlay de informações/licença -->
-<div class="overlay" id="overlay">
-  <p>Para mais informações sobre o jogo como modificações e licença, acesse: https://rafacles.itch.io/parkour-v7</p>
-  <button id="playBtn">Jogar</button>
-</div>
+  <div class="container">
+    <h1>parkour v7</h1>
 
-  <!-- Container do jogo -->
-  <div class="game-container" id="gameContainer">
-    <iframe src="https://gleaming-profiterole-c346a3.netlify.app" allowfullscreen></iframe>
+    <p></p>
+    <p></p>
+
+    <a class="botao" href="https://rafacles.itch.io/parkour-v7" target="_blank">
+      ▶ Jogar no itch.io
+    </a>
   </div>
-
-  <!-- Mensagem para virar o celular em vertical -->
-  <div class="rotate-message" id="rotateMsg">
-    <p>Gire o celular para jogar!</p>
-  </div>
-
-  <script>
-    const playBtn = document.getElementById("playBtn");
-    const overlay = document.getElementById("overlay");
-    const gameContainer = document.getElementById("gameContainer");
-
-    playBtn.addEventListener("click", () => {
-      overlay.style.display = "none";       // esconde a mensagem
-      gameContainer.style.display = "flex"; // mostra o iframe do jogo
-    });
-  </script>
 
 </body>
 </html>
