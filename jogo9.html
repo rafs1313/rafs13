@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rafacles - Jogo 4</title>
+
+  <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Overlay inicial */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .overlay button {
+      margin-top: 20px;
+      padding: 12px 26px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #FF9800;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .overlay button:hover {
+      background-color: #F57C00;
+    }
+
+    /* Área do jogo */
+    .game-container {
+      position: fixed;
+      inset: 0;
+      background-color: #000;
+      display: none;
+      overflow: hidden;
+    }
+
+    /* Iframe do Godot */
+    #gameIframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1280px;
+      height: 720px;
+      border: none;
+      transform-origin: center center;
+    }
+
+    /* Aviso rotação */
+    .rotate-message {
+      position: fixed;
+      inset: 0;
+      background-color: #000;
+      z-index: 20;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    @media (orientation: portrait) {
+      .rotate-message {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay">
+    <p>Bom jogo!</p>
+    <button id="playBtn">Jogar</button>
+  </div>
+
+  <!-- Jogo -->
+  <div class="game-container" id="gameContainer">
+    <iframe
+      id="gameIframe"
+      src="https://comfy-blancmange-2b0108.netlify.app"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Mensagem rotação -->
+  <div class="rotate-message">
+    <p>Gire o celular para jogar</p>
+  </div>
+
+  <script>
+    const playBtn = document.getElementById("playBtn");
+    const overlay = document.getElementById("overlay");
+    const gameContainer = document.getElementById("gameContainer");
+    const iframe = document.getElementById("gameIframe");
+
+    const GAME_WIDTH = 1280;
+    const GAME_HEIGHT = 720;
+
+    function resizeGame() {
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+
+      const scale = Math.min(
+        vw / GAME_WIDTH,
+        vh / GAME_HEIGHT
+      );
+
+      iframe.style.transform =
+        `translate(-50%, -50%) scale(${scale})`;
+    }
+
+    playBtn.addEventListener("click", () => {
+      overlay.style.display = "none";
+      gameContainer.style.display = "block";
+
+      setTimeout(resizeGame, 200);
+    });
+
+    window.addEventListener("resize", resizeGame);
+    window.addEventListener("orientationchange", () => {
+      setTimeout(resizeGame, 300);
+    });
+  </script>
+
+</body>
+</html>

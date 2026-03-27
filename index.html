@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rafacles</title>
+  <style>
+    .site-header {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo {
+      width: 80px;        /* tamanho bom pra mobile */
+      max-width: 30vw;    /* nunca fica gigante */
+      height: auto;
+    }
+
+    .site-title {
+      margin-top: 8px;
+      font-size: 1.4rem;
+      font-family: Arial, sans-serif;
+    }
+
+    h1, p {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* Estilo simples do botão */
+    .botao-jogo {
+      display: block;
+      width: 200px;
+      padding: 10px 20px;
+      margin: 10px auto;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .botao-jogo:hover {
+      background-color: #45a049;
+    }
+    .botao-jogar {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar:hover {
+  background-color: #45a049;
+}
+
+     .botao-jogar1 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar1:hover {
+  background-color: #45a049;
+}
+
+    .botao-jogar2 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar2:hover {
+  background-color: #45a049;
+}
+
+    .botao-jogar3 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar3:hover {
+  background-color: #45a049;
+}
+
+      .botao-jogar4 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FF9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar4:hover {
+  background-color: #F57C00;
+}
+
+          .botao-jogar5 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #F44336;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar5:hover {
+  background-color: #D32F2F;
+}
+
+        .botao-jogar6 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #800020;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar6:hover {
+  background-color: #66001a;
+}
+
+            .botao-jogar7 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #C0C0C0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar7:hover {
+  background-color: #A9A9A9;
+}
+
+            .botao-jogar8 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #6A0DAD;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar8:hover {
+  background-color: #580B94;
+}
+
+              .botao-jogar9 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #20B2AA;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar9:hover {
+  background-color: #1C9E97;
+}
+
+              .botao-jogar10 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #4FC3F7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar10:hover {
+  background-color: #29B6F6;
+}
+
+                .botao-jogar11 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #1E3A8A;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar11:hover {
+  background-color: #1A3378;
+}
+
+                .botao-jogar12 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FACC15;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar12:hover {
+  background-color: #EAB308;
+}
+
+                .botao-jogar13 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #4ADE80;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar13:hover {
+  background-color: #22C55E;
+}
+
+                  .botao-jogar14 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar14:hover {
+  background-color: #1D4ED8;
+}
+
+                    .botao-jogar15 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar15:hover {
+  background-color: #1D4ED8;
+}
+
+                    .botao-jogar16 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar16:hover {
+  background-color: #1D4ED8;
+}
+
+                    .botao-jogar17 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar17:hover {
+  background-color: #1D4ED8;
+}
+
+                    .botao-jogar18 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar18:hover {
+  background-color: #1D4ED8;
+}
+
+                      .botao-jogar19 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar19:hover {
+  background-color: #1D4ED8;
+}
+
+                      .botao-jogar20 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar20:hover {
+  background-color: #1D4ED8;
+}
+
+                      .botao-jogar21 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar21:hover {
+  background-color: #1D4ED8;
+}
+
+                      .botao-jogar22 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar22:hover {
+  background-color: #1D4ED8;
+}
+
+                      .botao-jogar23 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #2563EB;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar23:hover {
+  background-color: #1D4ED8;
+}
+
+                          .botao-jogar24 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FACC15;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar24:hover {
+  background-color: #EAB308;
+}
+
+                              .botao-jogar25 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FACC15;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar25:hover {
+  background-color: #EAB308;
+}
+
+                              .botao-jogar26 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FACC15;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar26:hover {
+  background-color: #EAB308;
+}
+
+                                  .botao-jogar27 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FACC15;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar27:hover {
+  background-color: #EAB308;
+}
+
+                                  .botao-jogar28 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FACC15;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar28:hover {
+  background-color: #EAB308;
+}
+
+                                  .botao-jogar29 {
+  display: block;       /* faz o botão ocupar a linha toda */
+  width: 200px;         /* você pode ajustar a largura como quiser */
+  padding: 10px 20px;
+  margin: 10px auto;    /* centraliza e dá espaço entre eles */
+  background-color: #FACC15;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;   /* garante que o texto fique centralizado */
+}
+
+.botao-jogar29:hover {
+  background-color: #EAB308;
+}
+    
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="images/logo.png" alt="Logo do site" class="logo">
+    <h1 class="site-title">Rafacles</h1>
+  </header>
+
+  <h1>🎮 Meus Jogos HTML5</h1>
+  <p>Bem-vindo ao meu site!</p>
+
+  <!-- Botão simples para abrir a página do jogo -->
+  <a href="jogo.html" class="botao-jogo">Jogar Jogo do Avião ✈️</a>
+  <a href="jogo2.html" class="botao-jogar">Jogar Jogo de Parkour: parkour V7 </a>
+  <a href="jogo3.html" class="botao-jogar1">Jogar Jogo de Parkour: Corrida Urbana: SP</a>
+  <a href="jogo4.html" class="botao-jogar2">Jogar Jogo de Parkour: escadinha</a>
+  <a href="jogo5.html" class="botao-jogar3">Jogar Jogo do Helicóptero: SkyFlight: Megacidade</a>
+  <a href="jogo6.html" class="botao-jogar4">Jogar Jogo: Quiz Aviação</a>
+  <a href="jogo7.html" class="botao-jogar5">Jogar Jogo: Quiz Aviação 2</a>
+  <a href="jogo8.html" class="botao-jogar6">Jogar Jogo: Quiz Aviação 3</a>
+  <a href="jogo9.html" class="botao-jogar7">Jogar Jogo: Quiz Aviação 4</a>
+  <a href="jogo10.html" class="botao-jogar8">Jogar Jogo: Quiz Aviação 5</a>
+  <a href="jogo11.html" class="botao-jogar9">Jogar Jogo: Quiz Aviação 6</a>
+  <a href="jogo12.html" class="botao-jogar10">Jogar Jogo: Quiz Aviação 7</a>
+  <a href="jogo13.html" class="botao-jogar11">Jogar Jogo: Quiz Aviação 8</a>
+  <a href="jogo14.html" class="botao-jogar12">Jogar Jogo: Quiz Aviação 9</a>
+  <a href="jogo15.html" class="botao-jogar13">Jogar Jogo: Quiz Aviação 10</a>
+  <a href="jogo16.html" class="botao-jogar14">Jogar Jogo: Quiz Aviação 11</a>
+  <a href="jogo17.html" class="botao-jogar15">Jogar Jogo: Quiz Aviação 12</a>
+  <a href="jogo18.html" class="botao-jogar16">Jogar Jogo: Quiz Aviação 13</a>
+  <a href="jogo19.html" class="botao-jogar17">Jogar Jogo: Quiz Aviação 14</a>
+  <a href="jogo20.html" class="botao-jogar18">Jogar Jogo: Quiz Aviação 15</a>
+  <a href="jogo21.html" class="botao-jogar19">Jogar Jogo: Quiz Aviação 16</a>
+  <a href="jogo22.html" class="botao-jogar20">Jogar Jogo: Quiz Aviação 17</a>
+  <a href="jogo23.html" class="botao-jogar21">Jogar Jogo: Quiz Aviação 18</a>
+  <a href="jogo24.html" class="botao-jogar22">Jogar Jogo: Quiz Aviação 19</a>
+  <a href="jogo25.html" class="botao-jogar23">Jogar Jogo: Quiz Aviação 20</a>
+  <a href="jogo26.html" class="botao-jogar24">Jogar Jogo: Quiz Aviação 21</a>
+  <a href="jogo27.html" class="botao-jogar25">Jogar Jogo: Quiz Aviação 22</a>
+  <a href="jogo28.html" class="botao-jogar26">Jogar Jogo: Quiz Aviação 23</a>
+  <a href="jogo29.html" class="botao-jogar27">Jogar Jogo: Quiz Aviação 24</a>
+  <a href="jogo30.html" class="botao-jogar28">Jogar Jogo: Quiz Aviação 25</a>
+  <a href="jogo31.html" class="botao-jogar29">Jogar Jogo: Quiz Aviação 26</a>
+
+  <!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com/" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=21480768&style=0005&nbdigits=5&type=ip&initCount=0" title="Free Tools" Alt="Free Tools"   border="0" /></a>     
+  
+</body>
+</html>
